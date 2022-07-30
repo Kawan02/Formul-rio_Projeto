@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+    <script defer src="script.js"></script>
+    <script>
+        function mascara_cpf() {
+            var cpf = document.getElementById('cpf')
+            if(cpf.value.length == 3 || cpf.value.length == 7) {
+                cpf.value += "."
+            } else if (cpf.value.length == 11) {
+                cpf.value += "-"
+            }
+        }
+    </script>
+</head>
+<body>
+    <main class="Cadastro">
+        <div class="login__container">
+            <h1 class="login__title">Cadastre-se
+                <h4>Complete as informações:</h4>
+            </h1>
+            <form class="login-form">
+            <input class="login__input" type="email" placeholder="e-mail" required>
+            <span class="login__input-border"></span>
+            <input class="login__input" type="password" placeholder="senha" maxlength="16" required>
+            <span class="login__input-border"></span>
+            <input class="login__input" type="date" placeholder="data" required>
+            <span class="login__input-border"></span>
+            <input id="cpf" class="login__input" type="text" placeholder="CPF" 
+            autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" required>
+            <span class="login__input-border"></span>
+            <input id="tel" class="login__input" type="tel" placeholder="Telefone: (11) 9 9999-9999" maxlength="16" required>
+            <span class="login__input-border"></span>
+            <button class="submit">Cadastra-se</button>
+            <a class="principal" href="file:///C:/Users/kawan/OneDrive/Documentos/Projetos%20Kawan/Formul%C3%A1rio/Formul%C3%A1rio.html">Volte para página principal</a>
+        
+</body>
+</html>

@@ -1,0 +1,119 @@
+:root{
+    --input-linear: linear-gradient(120deg, #0077a0, #fc9923);
+    --white: white;
+    --login: #2c2b2b;
+    --input-linear: linear-gradient(120deg, #0077a0, #fc9923);
+    --submit-linear: linear-gradient(120deg, #fc9923, #0077a0);
+    --button-disabled: rgb(175, 177, 169);
+    --button-success: rgb(41, 196, 41);
+    --reset: #757a74;
+    --input-error: red;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.Cadastro{
+    height: 100vh;
+    background: var(--input-linear);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login__container{
+    min-height: 335px;
+    width: 480px;
+    background-color:var(--white);
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login{
+    margin-bottom: 32px;
+    color: var(--login);
+}
+.login-form{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: center;
+}
+
+.login__input{
+    height: 48px;
+    width: 230%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+
+.login__input-border{
+    height: 1px;
+    width: 230%;
+    margin-bottom: 16px;
+    background-color: #cfcfcf;
+    transition: .3s ease-in-out;
+}
+
+.login__input-border::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: var(--input-linear);
+    transition: .3s ease-in-out;
+}
+
+.login__input:focus + .login__input-border::after {
+    width: 100%;
+}
+
+.login__input-border.error {
+    background: var(--input-error);
+}
+
+.submit{
+    height: 48px;
+    width: 250%;
+    outline: none;
+    background: var(--submit-linear);
+    background-size: 200%;
+    margin-bottom: 32px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.submit:disabled {
+    background: var(--button-disabled);
+    cursor: not-allowed;
+}
+.submit:hover{
+    background-position: right;
+}
+
+.submit.error {
+    background: var(--input-error);
+}
+.submit.success{
+    background: var(--button-success);
+}
+
+.principal{
+    font-size: 11px;
+    color: var(--reset);
+    text-decoration: none;
+    text-align: center;
+}
